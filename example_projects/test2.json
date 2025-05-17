@@ -1,0 +1,222 @@
+{
+    "file_name": "C:/Users/Peeter/PycharmProjects/String-Diagrams/MVP/refactored/test2.json",
+    "date": 1724339994.4046507,
+    "main_canvas": {
+        "boxes": [
+            {
+                "id": 1893950861072,
+                "x": 271,
+                "y": 268,
+                "size": [
+                    60,
+                    60
+                ],
+                "label": "1to1",
+                "shape": "rectangle",
+                "connections": [
+                    {
+                        "id": 1893950923680,
+                        "side": "left",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 1893950861072,
+                        "has_wire": true,
+                        "wire_id": 1893950924160
+                    },
+                    {
+                        "id": 1893950923728,
+                        "side": "right",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 1893950861072,
+                        "has_wire": true,
+                        "wire_id": 1893950924496
+                    }
+                ],
+                "sub_diagram": null,
+                "locked": true
+            }
+        ],
+        "spiders": [
+            {
+                "id": 1893950859152,
+                "x": 806,
+                "y": 263,
+                "connections": []
+            },
+            {
+                "id": 1893950859824,
+                "x": 806,
+                "y": 479,
+                "connections": []
+            },
+            {
+                "id": 1893950860400,
+                "x": 511,
+                "y": 343,
+                "connections": []
+            }
+        ],
+        "io": {
+            "inputs": [
+                {
+                    "id": 1893950858768,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1893950924160
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1893950858720,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1893950925264
+                },
+                {
+                    "id": 1893950858960,
+                    "side": "left",
+                    "index": 1,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1893950925648
+                }
+            ]
+        },
+        "wires": [
+            {
+                "id": 1893950924160,
+                "start_c": {
+                    "id": 1893950858768,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1893950924160
+                },
+                "end_c": {
+                    "id": 1893950923680,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 1893950861072,
+                    "has_wire": true,
+                    "wire_id": 1893950924160
+                }
+            },
+            {
+                "id": 1893950924496,
+                "start_c": {
+                    "id": 1893950923728,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 1893950861072,
+                    "has_wire": true,
+                    "wire_id": 1893950924496
+                },
+                "end_c": {
+                    "id": 1893950860400,
+                    "side": "spider",
+                    "index": 0,
+                    "spider": true,
+                    "box_id": null,
+                    "has_wire": false,
+                    "wire_id": null
+                }
+            },
+            {
+                "id": 1893950924880,
+                "start_c": {
+                    "id": 1893950860400,
+                    "side": "spider",
+                    "index": 0,
+                    "spider": true,
+                    "box_id": null,
+                    "has_wire": false,
+                    "wire_id": null
+                },
+                "end_c": {
+                    "id": 1893950859824,
+                    "side": "spider",
+                    "index": 0,
+                    "spider": true,
+                    "box_id": null,
+                    "has_wire": false,
+                    "wire_id": null
+                }
+            },
+            {
+                "id": 1893950925264,
+                "start_c": {
+                    "id": 1893950859824,
+                    "side": "spider",
+                    "index": 0,
+                    "spider": true,
+                    "box_id": null,
+                    "has_wire": false,
+                    "wire_id": null
+                },
+                "end_c": {
+                    "id": 1893950858720,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1893950925264
+                }
+            },
+            {
+                "id": 1893950925648,
+                "start_c": {
+                    "id": 1893950858960,
+                    "side": "left",
+                    "index": 1,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1893950925648
+                },
+                "end_c": {
+                    "id": 1893950859152,
+                    "side": "spider",
+                    "index": 0,
+                    "spider": true,
+                    "box_id": null,
+                    "has_wire": false,
+                    "wire_id": null
+                }
+            },
+            {
+                "id": 1893950926032,
+                "start_c": {
+                    "id": 1893950859152,
+                    "side": "spider",
+                    "index": 0,
+                    "spider": true,
+                    "box_id": null,
+                    "has_wire": false,
+                    "wire_id": null
+                },
+                "end_c": {
+                    "id": 1893950860400,
+                    "side": "spider",
+                    "index": 0,
+                    "spider": true,
+                    "box_id": null,
+                    "has_wire": false,
+                    "wire_id": null
+                }
+            }
+        ]
+    }
+}

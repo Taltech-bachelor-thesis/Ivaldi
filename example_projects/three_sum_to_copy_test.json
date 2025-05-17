@@ -1,0 +1,424 @@
+{
+    "file_name": "C:/Users/Andrei/PycharmProjects/Tellimus/example_projects/three_sum_to_copy_test.json",
+    "date": 1730910336.3823507,
+    "main_canvas": {
+        "boxes": [
+            {
+                "id": 1840156863472,
+                "x": 457,
+                "y": 306,
+                "size": [
+                    60,
+                    60
+                ],
+                "label": "",
+                "connections": [
+                    {
+                        "id": 1840259844368,
+                        "side": "left",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 1840156863472,
+                        "has_wire": true,
+                        "wire_id": 1840259842208
+                    },
+                    {
+                        "id": 1840259843744,
+                        "side": "left",
+                        "index": 1,
+                        "spider": false,
+                        "box_id": 1840156863472,
+                        "has_wire": true,
+                        "wire_id": 1840259843024
+                    },
+                    {
+                        "id": 1840259843600,
+                        "side": "right",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 1840156863472,
+                        "has_wire": true,
+                        "wire_id": 1840156867840
+                    }
+                ],
+                "sub_diagram": null,
+                "locked": false
+            },
+            {
+                "id": 1840156864336,
+                "x": 787,
+                "y": 302,
+                "size": [
+                    60,
+                    60
+                ],
+                "label": "",
+                "connections": [
+                    {
+                        "id": 1840259846048,
+                        "side": "left",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 1840156864336,
+                        "has_wire": true,
+                        "wire_id": 1840156867840
+                    },
+                    {
+                        "id": 1840259845424,
+                        "side": "right",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 1840156864336,
+                        "has_wire": true,
+                        "wire_id": 1840156866544
+                    },
+                    {
+                        "id": 1840259845280,
+                        "side": "right",
+                        "index": 1,
+                        "spider": false,
+                        "box_id": 1840156864336,
+                        "has_wire": true,
+                        "wire_id": 1840156867120
+                    }
+                ],
+                "sub_diagram": null,
+                "locked": false
+            },
+            {
+                "id": 1840156865056,
+                "x": 241.0,
+                "y": 444,
+                "size": [
+                    60,
+                    60
+                ],
+                "label": "",
+                "connections": [
+                    {
+                        "id": 1840259842688,
+                        "side": "left",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 1840156865056,
+                        "has_wire": true,
+                        "wire_id": 1840259845184
+                    },
+                    {
+                        "id": 1840259842112,
+                        "side": "left",
+                        "index": 1,
+                        "spider": false,
+                        "box_id": 1840156865056,
+                        "has_wire": true,
+                        "wire_id": 1840259846288
+                    },
+                    {
+                        "id": 1840259842640,
+                        "side": "right",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 1840156865056,
+                        "has_wire": true,
+                        "wire_id": 1840259843024
+                    }
+                ],
+                "sub_diagram": null,
+                "locked": false
+            },
+            {
+                "id": 1840156865776,
+                "x": 241.0,
+                "y": 166,
+                "size": [
+                    60,
+                    60
+                ],
+                "label": "",
+                "connections": [
+                    {
+                        "id": 1840156867504,
+                        "side": "left",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 1840156865776,
+                        "has_wire": true,
+                        "wire_id": 1840259846912
+                    },
+                    {
+                        "id": 1840156865824,
+                        "side": "left",
+                        "index": 1,
+                        "spider": false,
+                        "box_id": 1840156865776,
+                        "has_wire": true,
+                        "wire_id": 1840259843264
+                    },
+                    {
+                        "id": 1840156866592,
+                        "side": "right",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 1840156865776,
+                        "has_wire": true,
+                        "wire_id": 1840259842208
+                    }
+                ],
+                "sub_diagram": null,
+                "locked": false
+            }
+        ],
+        "spiders": [],
+        "io": {
+            "inputs": [
+                {
+                    "id": 1840156862704,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1840259846912
+                },
+                {
+                    "id": 1840156862896,
+                    "side": "right",
+                    "index": 1,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1840259843264
+                },
+                {
+                    "id": 1840156863088,
+                    "side": "right",
+                    "index": 2,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1840259845184
+                },
+                {
+                    "id": 1840156863280,
+                    "side": "right",
+                    "index": 3,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1840259846288
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 1840156862512,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1840156866544
+                },
+                {
+                    "id": 1840156862464,
+                    "side": "left",
+                    "index": 1,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1840156867120
+                }
+            ]
+        },
+        "wires": [
+            {
+                "id": 1840156866544,
+                "start_c": {
+                    "id": 1840259845424,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 1840156864336,
+                    "has_wire": true,
+                    "wire_id": 1840156866544
+                },
+                "end_c": {
+                    "id": 1840156862512,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1840156866544
+                }
+            },
+            {
+                "id": 1840156867120,
+                "start_c": {
+                    "id": 1840259845280,
+                    "side": "right",
+                    "index": 1,
+                    "spider": false,
+                    "box_id": 1840156864336,
+                    "has_wire": true,
+                    "wire_id": 1840156867120
+                },
+                "end_c": {
+                    "id": 1840156862464,
+                    "side": "left",
+                    "index": 1,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1840156867120
+                }
+            },
+            {
+                "id": 1840156867840,
+                "start_c": {
+                    "id": 1840259843600,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 1840156863472,
+                    "has_wire": true,
+                    "wire_id": 1840156867840
+                },
+                "end_c": {
+                    "id": 1840259846048,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 1840156864336,
+                    "has_wire": true,
+                    "wire_id": 1840156867840
+                }
+            },
+            {
+                "id": 1840259846912,
+                "start_c": {
+                    "id": 1840156862704,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1840259846912
+                },
+                "end_c": {
+                    "id": 1840156867504,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 1840156865776,
+                    "has_wire": true,
+                    "wire_id": 1840259846912
+                }
+            },
+            {
+                "id": 1840259843264,
+                "start_c": {
+                    "id": 1840156862896,
+                    "side": "right",
+                    "index": 1,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1840259843264
+                },
+                "end_c": {
+                    "id": 1840156865824,
+                    "side": "left",
+                    "index": 1,
+                    "spider": false,
+                    "box_id": 1840156865776,
+                    "has_wire": true,
+                    "wire_id": 1840259843264
+                }
+            },
+            {
+                "id": 1840259842208,
+                "start_c": {
+                    "id": 1840156866592,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 1840156865776,
+                    "has_wire": true,
+                    "wire_id": 1840259842208
+                },
+                "end_c": {
+                    "id": 1840259844368,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 1840156863472,
+                    "has_wire": true,
+                    "wire_id": 1840259842208
+                }
+            },
+            {
+                "id": 1840259845184,
+                "start_c": {
+                    "id": 1840156863088,
+                    "side": "right",
+                    "index": 2,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1840259845184
+                },
+                "end_c": {
+                    "id": 1840259842688,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 1840156865056,
+                    "has_wire": true,
+                    "wire_id": 1840259845184
+                }
+            },
+            {
+                "id": 1840259846288,
+                "start_c": {
+                    "id": 1840156863280,
+                    "side": "right",
+                    "index": 3,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 1840259846288
+                },
+                "end_c": {
+                    "id": 1840259842112,
+                    "side": "left",
+                    "index": 1,
+                    "spider": false,
+                    "box_id": 1840156865056,
+                    "has_wire": true,
+                    "wire_id": 1840259846288
+                }
+            },
+            {
+                "id": 1840259843024,
+                "start_c": {
+                    "id": 1840259842640,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 1840156865056,
+                    "has_wire": true,
+                    "wire_id": 1840259843024
+                },
+                "end_c": {
+                    "id": 1840259843744,
+                    "side": "left",
+                    "index": 1,
+                    "spider": false,
+                    "box_id": 1840156863472,
+                    "has_wire": true,
+                    "wire_id": 1840259843024
+                }
+            }
+        ]
+    }
+}

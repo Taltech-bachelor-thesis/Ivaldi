@@ -1,0 +1,14 @@
+astor==0.8.1
+autopep8==2.3.1
+chlorophyll==0.4.2
+hupper==1.12.1
+matplotlib==3.10.0
+networkx==3.3
+numpy==2.2.3
+pandas==2.2.3
+Pillow==11.1.0
+Pygments==2.19.1
+scipy==1.15.2
+ttkbootstrap==1.10.1
+webcolors==24.11.1
+hypernetx~=2.4.0

@@ -1,0 +1,5 @@
+{
+    "method1": "def method1(x1):\n    return (x1)",
+    "test": "def invoke(x) -> list:\n    return [x, x]\n\n\nmeta = {\n    \"name\": \"Copy\",\n    \"min_args\": 1,\n    \"max_args\": 1\n}",
+    "method2": "def method2(x2):\n    return (x2)"
+}

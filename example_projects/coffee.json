@@ -1,0 +1,402 @@
+{
+    "file_name": "C:/Users/Timofei/PycharmProjects/iti0303-2024/example_projects/coffee.json",
+    "date": 1747144176.64349,
+    "static_variables": {
+        "active_types": 1,
+        "defined_wires": {}
+    },
+    "main_canvas": {
+        "boxes": [
+            {
+                "id": 1,
+                "x": 162.0,
+                "y": 330.0,
+                "size": [
+                    60,
+                    60
+                ],
+                "label": "take a cup",
+                "connections": [
+                    {
+                        "id": 10,
+                        "side": "left",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 1,
+                        "has_wire": true,
+                        "wire_id": 56,
+                        "type": "GENERIC"
+                    },
+                    {
+                        "id": 11,
+                        "side": "right",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 1,
+                        "has_wire": true,
+                        "wire_id": 41,
+                        "type": "GENERIC"
+                    },
+                    {
+                        "id": 62,
+                        "side": "right",
+                        "index": 1,
+                        "spider": false,
+                        "box_id": 1,
+                        "has_wire": true,
+                        "wire_id": 415,
+                        "type": "GENERIC"
+                    }
+                ],
+                "sub_diagram": null,
+                "locked": false,
+                "shape": "rectangle",
+                "box_function_relative_location": ""
+            },
+            {
+                "id": 2,
+                "x": 594.0,
+                "y": 211.0,
+                "size": [
+                    60,
+                    60
+                ],
+                "label": "add milk",
+                "connections": [
+                    {
+                        "id": 12,
+                        "side": "left",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 2,
+                        "has_wire": true,
+                        "wire_id": 41,
+                        "type": "GENERIC"
+                    },
+                    {
+                        "id": 13,
+                        "side": "right",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 2,
+                        "has_wire": true,
+                        "wire_id": 319,
+                        "type": "GENERIC"
+                    }
+                ],
+                "sub_diagram": null,
+                "locked": false,
+                "shape": "rectangle",
+                "box_function_relative_location": ""
+            },
+            {
+                "id": 3,
+                "x": 594.0,
+                "y": 441.0,
+                "size": [
+                    60,
+                    60
+                ],
+                "label": "add coffee",
+                "connections": [
+                    {
+                        "id": 14,
+                        "side": "left",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 3,
+                        "has_wire": true,
+                        "wire_id": 415,
+                        "type": "GENERIC"
+                    },
+                    {
+                        "id": 15,
+                        "side": "right",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 3,
+                        "has_wire": true,
+                        "wire_id": 172,
+                        "type": "GENERIC"
+                    }
+                ],
+                "sub_diagram": null,
+                "locked": false,
+                "shape": "rectangle",
+                "box_function_relative_location": ""
+            },
+            {
+                "id": 4,
+                "x": 965.0,
+                "y": 330.0,
+                "size": [
+                    60,
+                    60
+                ],
+                "label": "mix drink",
+                "connections": [
+                    {
+                        "id": 16,
+                        "side": "left",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 4,
+                        "has_wire": true,
+                        "wire_id": 319,
+                        "type": "GENERIC"
+                    },
+                    {
+                        "id": 17,
+                        "side": "right",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 4,
+                        "has_wire": true,
+                        "wire_id": 49,
+                        "type": "GENERIC"
+                    },
+                    {
+                        "id": 63,
+                        "side": "left",
+                        "index": 1,
+                        "spider": false,
+                        "box_id": 4,
+                        "has_wire": true,
+                        "wire_id": 172,
+                        "type": "GENERIC"
+                    }
+                ],
+                "sub_diagram": null,
+                "locked": false,
+                "shape": "rectangle",
+                "box_function_relative_location": ""
+            },
+            {
+                "id": 5,
+                "x": 1273.0,
+                "y": 330.0,
+                "size": [
+                    60,
+                    60
+                ],
+                "label": "serve coffee",
+                "connections": [
+                    {
+                        "id": 18,
+                        "side": "left",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 5,
+                        "has_wire": true,
+                        "wire_id": 49,
+                        "type": "GENERIC"
+                    },
+                    {
+                        "id": 19,
+                        "side": "right",
+                        "index": 0,
+                        "spider": false,
+                        "box_id": 5,
+                        "has_wire": true,
+                        "wire_id": 52,
+                        "type": "GENERIC"
+                    }
+                ],
+                "sub_diagram": null,
+                "locked": false,
+                "shape": "rectangle",
+                "box_function_relative_location": ""
+            }
+        ],
+        "spiders": [],
+        "io": {
+            "inputs": [
+                {
+                    "id": 6,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 56,
+                    "type": "GENERIC"
+                }
+            ],
+            "outputs": [
+                {
+                    "id": 8,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 52,
+                    "type": "GENERIC"
+                }
+            ]
+        },
+        "wires": [
+            {
+                "id": 41,
+                "start_c": {
+                    "id": 11,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 1,
+                    "has_wire": true,
+                    "wire_id": 41,
+                    "type": "GENERIC"
+                },
+                "end_c": {
+                    "id": 12,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 2,
+                    "has_wire": true,
+                    "wire_id": 41,
+                    "type": "GENERIC"
+                }
+            },
+            {
+                "id": 49,
+                "start_c": {
+                    "id": 17,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 4,
+                    "has_wire": true,
+                    "wire_id": 49,
+                    "type": "GENERIC"
+                },
+                "end_c": {
+                    "id": 18,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 5,
+                    "has_wire": true,
+                    "wire_id": 49,
+                    "type": "GENERIC"
+                }
+            },
+            {
+                "id": 52,
+                "start_c": {
+                    "id": 19,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 5,
+                    "has_wire": true,
+                    "wire_id": 52,
+                    "type": "GENERIC"
+                },
+                "end_c": {
+                    "id": 8,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 52,
+                    "type": "GENERIC"
+                }
+            },
+            {
+                "id": 56,
+                "start_c": {
+                    "id": 6,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": null,
+                    "has_wire": true,
+                    "wire_id": 56,
+                    "type": "GENERIC"
+                },
+                "end_c": {
+                    "id": 10,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 1,
+                    "has_wire": true,
+                    "wire_id": 56,
+                    "type": "GENERIC"
+                }
+            },
+            {
+                "id": 172,
+                "start_c": {
+                    "id": 15,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 3,
+                    "has_wire": true,
+                    "wire_id": 172,
+                    "type": "GENERIC"
+                },
+                "end_c": {
+                    "id": 63,
+                    "side": "left",
+                    "index": 1,
+                    "spider": false,
+                    "box_id": 4,
+                    "has_wire": true,
+                    "wire_id": 172,
+                    "type": "GENERIC"
+                }
+            },
+            {
+                "id": 319,
+                "start_c": {
+                    "id": 13,
+                    "side": "right",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 2,
+                    "has_wire": true,
+                    "wire_id": 319,
+                    "type": "GENERIC"
+                },
+                "end_c": {
+                    "id": 16,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 4,
+                    "has_wire": true,
+                    "wire_id": 319,
+                    "type": "GENERIC"
+                }
+            },
+            {
+                "id": 415,
+                "start_c": {
+                    "id": 62,
+                    "side": "right",
+                    "index": 1,
+                    "spider": false,
+                    "box_id": 1,
+                    "has_wire": true,
+                    "wire_id": 415,
+                    "type": "GENERIC"
+                },
+                "end_c": {
+                    "id": 14,
+                    "side": "left",
+                    "index": 0,
+                    "spider": false,
+                    "box_id": 3,
+                    "has_wire": true,
+                    "wire_id": 415,
+                    "type": "GENERIC"
+                }
+            }
+        ]
+    }
+}
