@@ -68,6 +68,7 @@ class Wire:
             self.id = IdGenerator.id(self)
         else:
             self.id = id_
+            IdGenerator.use_id(self.id)
         self.receiver = canvas.main_diagram.receiver
         self.is_temporary = is_temporary
         if not is_temporary and not self.canvas.is_search:

@@ -11,10 +11,12 @@ if TYPE_CHECKING:
 
 
 class Node:
-    def __init__(self, node_id: int = None, is_special=False):
+    def __init__(self, node_id: int = None, hypergraph_id = -1, canvas_id: int = -1, is_special=False):
         if node_id is None:
             node_id = IdGenerator.id(self)
+        self.canvas_id = canvas_id
         self.id = node_id
+        self.hypergraph_id = hypergraph_id
         self.inputs: list[HyperEdge] = []
         self.outputs: list[HyperEdge] = []
         self.is_special = is_special  # if it diagram input/output
@@ -174,6 +176,7 @@ class Node:
             self.outputs.remove(output_hyper_edge)
 
     def union(self, other: Self):
+        if other == self: raise ValueError('Cannot union node with itself')
         self.directly_connected_to.append(other)
         other.directly_connected_to.append(self)
 

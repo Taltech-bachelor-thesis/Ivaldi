@@ -44,6 +44,7 @@ class Connection:
             self.id = IdGenerator.id(self)
         else:
             self.id = id_
+            IdGenerator.use_id(self.id)
 
         self.context_menu = None
         self.circle = self.canvas.create_oval(location[0] - self.r, location[1] - self.r, location[0] + self.r,

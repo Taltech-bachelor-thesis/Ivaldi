@@ -55,11 +55,13 @@ class Hypergraph:
     def get_hypergraph_target(self) -> list[Node]:
         queue = Queue()
         target_nodes: dict[int, Node] = dict()
+        visited: set[Node] = set()
         for node in self.get_hypergraph_source():
             queue.put(node)
 
         while not queue.empty():
             node = queue.get()
+            visited.add(node)
             output_hyper_edges: list[HyperEdge] = node.get_output_hyper_edges()
             if len(output_hyper_edges) == 0:
                 target_nodes[node.id] = node
@@ -68,7 +70,8 @@ class Hypergraph:
 
             for output_hyper_edge in output_hyper_edges:
                 for target_node in output_hyper_edge.get_target_nodes():
-                    queue.put(target_node)
+                    if target_node not in visited:
+                        queue.put(target_node)
         return list(target_nodes.values())
 
     def get_canvas_id(self) -> int:

@@ -137,7 +137,6 @@ class PythonImporter(Importer):
                            deep_generation: bool) -> Box:
         new_box = canvas.add_box(box_position)
         assigned_value = code_line.assigned_value
-        new_box.set_label(assigned_value.value)
 
         create_sub_diagram = False
         if isinstance(assigned_value, FunctionCall) and assigned_value.value in functions:
@@ -147,8 +146,8 @@ class PythonImporter(Importer):
         else:
             box_function = PythonImporter._create_mocked_box_function(assigned_value)
 
-        new_box.set_box_function(box_function)
-        canvas.main_diagram.add_function_to_label_content(assigned_value.value, box_function.main_function)
+        canvas.main_diagram.add_function_to_label_content(box_function.main_function_name, box_function.main_function)
+        new_box.set_label(box_function.main_function_name)
 
         if create_sub_diagram:
             PythonImporter._create_box_sub_diagram(new_box, assigned_variables_amount, functions)

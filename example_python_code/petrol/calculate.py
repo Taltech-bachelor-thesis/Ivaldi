@@ -1,6 +1,4 @@
-from example_python_code.petrol.cost import (
-    calculate_total_cost, round_cost)
-
+from example_python_code.petrol.cost import (calculate_total_cost, round_cost)
 
 def calculate_monthly_distance(daily_distance):
     days_in_month = 30

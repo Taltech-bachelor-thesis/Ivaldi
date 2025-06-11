@@ -157,7 +157,9 @@ class Receiver:
 
             HypergraphManager.remove_node(connection_id)
         elif action == ActionType.DIAGRAM_REMOVE_OUTPUT:
-            pass
+            self.diagrams[canvas_id].remove_output(connection_id)
+
+            HypergraphManager.remove_node(connection_id)
 
     def spider_callback(self, action: str, **kwargs):
         pass

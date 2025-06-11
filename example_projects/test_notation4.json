@@ -36,7 +36,7 @@
                 "sub_diagram": {
                     "boxes": [
                         {
-                            "id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                            "id": 12321312312,
                             "x": 383,
                             "y": 238,
                             "size": [
@@ -51,7 +51,7 @@
                                     "side": "right",
                                     "index": 0,
                                     "spider": false,
-                                    "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                    "box_id": 12321312312,
                                     "has_wire": true,
                                     "wire_id": 2523653137936
                                 },
@@ -60,7 +60,7 @@
                                     "side": "right",
                                     "index": 1,
                                     "spider": false,
-                                    "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                    "box_id": 12321312312,
                                     "has_wire": true,
                                     "wire_id": 2523653138224
                                 },
@@ -69,7 +69,7 @@
                                     "side": "right",
                                     "index": 2,
                                     "spider": false,
-                                    "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                    "box_id": 12321312312,
                                     "has_wire": true,
                                     "wire_id": 2523653138512
                                 },
@@ -78,7 +78,7 @@
                                     "side": "right",
                                     "index": 3,
                                     "spider": false,
-                                    "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                    "box_id": 12321312312,
                                     "has_wire": true,
                                     "wire_id": 2523653138800
                                 },
@@ -87,7 +87,7 @@
                                     "side": "left",
                                     "index": 0,
                                     "spider": false,
-                                    "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                    "box_id": 12321312312,
                                     "has_wire": true,
                                     "wire_id": 2523653136784
                                 },
@@ -96,7 +96,7 @@
                                     "side": "left",
                                     "index": 1,
                                     "spider": false,
-                                    "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                    "box_id": 12321312312,
                                     "has_wire": true,
                                     "wire_id": 2523653137072
                                 },
@@ -105,7 +105,7 @@
                                     "side": "left",
                                     "index": 2,
                                     "spider": false,
-                                    "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                    "box_id": 12321312312,
                                     "has_wire": true,
                                     "wire_id": 2523653137360
                                 },
@@ -114,7 +114,7 @@
                                     "side": "left",
                                     "index": 3,
                                     "spider": false,
-                                    "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                    "box_id": 12321312312,
                                     "has_wire": true,
                                     "wire_id": 2523653137648
                                 }
@@ -125,13 +125,13 @@
                     ],
                     "spiders": [
                         {
-                            "id": "a95e50fb8ac39fb83b84994eec70da368a0207bb89ca60ca9f61b51ce37be116",
+                            "id": 123213592,
                             "x": 293,
                             "y": 324,
                             "connections": []
                         },
                         {
-                            "id": "137110f9046d0c431d12e3c49f9d177c29338871d67a5afc7042792b05342467",
+                            "id": 123213562,
                             "x": 552,
                             "y": 318,
                             "connections": []
@@ -140,7 +140,7 @@
                     "io": {
                         "inputs": [
                             {
-                                "id": "612b80f05d4aebfeb6701601f07172f74c9de84cd41427f565fb720e48713ab4",
+                                "id": 12321312315,
                                 "side": "right",
                                 "index": 0,
                                 "spider": false,
@@ -151,7 +151,7 @@
                         ],
                         "outputs": [
                             {
-                                "id": "9a99609be088363ae5c075e4d3758601406a4a04081571247fcbe4ed69577375",
+                                "id": 12321323,
                                 "side": "left",
                                 "index": 0,
                                 "spider": false,
@@ -169,12 +169,12 @@
                                 "side": "left",
                                 "index": 0,
                                 "spider": false,
-                                "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                "box_id": 12321312312,
                                 "has_wire": true,
                                 "wire_id": 2523653136784
                             },
                             "end_c": {
-                                "id": "a95e50fb8ac39fb83b84994eec70da368a0207bb89ca60ca9f61b51ce37be116",
+                                "id": 123213592,
                                 "side": "spider",
                                 "index": 0,
                                 "spider": true,
@@ -190,12 +190,12 @@
                                 "side": "left",
                                 "index": 1,
                                 "spider": false,
-                                "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                "box_id": 12321312312,
                                 "has_wire": true,
                                 "wire_id": 2523653137072
                             },
                             "end_c": {
-                                "id": "a95e50fb8ac39fb83b84994eec70da368a0207bb89ca60ca9f61b51ce37be116",
+                                "id": 123213592,
                                 "side": "spider",
                                 "index": 0,
                                 "spider": true,
@@ -211,12 +211,12 @@
                                 "side": "left",
                                 "index": 2,
                                 "spider": false,
-                                "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                "box_id": 12321312312,
                                 "has_wire": true,
                                 "wire_id": 2523653137360
                             },
                             "end_c": {
-                                "id": "a95e50fb8ac39fb83b84994eec70da368a0207bb89ca60ca9f61b51ce37be116",
+                                "id": 123213592,
                                 "side": "spider",
                                 "index": 0,
                                 "spider": true,
@@ -232,12 +232,12 @@
                                 "side": "left",
                                 "index": 3,
                                 "spider": false,
-                                "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                "box_id": 12321312312,
                                 "has_wire": true,
                                 "wire_id": 2523653137648
                             },
                             "end_c": {
-                                "id": "a95e50fb8ac39fb83b84994eec70da368a0207bb89ca60ca9f61b51ce37be116",
+                                "id": 123213592,
                                 "side": "spider",
                                 "index": 0,
                                 "spider": true,
@@ -253,12 +253,12 @@
                                 "side": "right",
                                 "index": 0,
                                 "spider": false,
-                                "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                "box_id": 12321312312,
                                 "has_wire": true,
                                 "wire_id": 2523653137936
                             },
                             "end_c": {
-                                "id": "137110f9046d0c431d12e3c49f9d177c29338871d67a5afc7042792b05342467",
+                                "id": 123213562,
                                 "side": "spider",
                                 "index": 0,
                                 "spider": true,
@@ -274,12 +274,12 @@
                                 "side": "right",
                                 "index": 1,
                                 "spider": false,
-                                "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                "box_id": 12321312312,
                                 "has_wire": true,
                                 "wire_id": 2523653138224
                             },
                             "end_c": {
-                                "id": "137110f9046d0c431d12e3c49f9d177c29338871d67a5afc7042792b05342467",
+                                "id": 123213562,
                                 "side": "spider",
                                 "index": 0,
                                 "spider": true,
@@ -295,12 +295,12 @@
                                 "side": "right",
                                 "index": 2,
                                 "spider": false,
-                                "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                "box_id": 12321312312,
                                 "has_wire": true,
                                 "wire_id": 2523653138512
                             },
                             "end_c": {
-                                "id": "137110f9046d0c431d12e3c49f9d177c29338871d67a5afc7042792b05342467",
+                                "id": 123213562,
                                 "side": "spider",
                                 "index": 0,
                                 "spider": true,
@@ -316,12 +316,12 @@
                                 "side": "right",
                                 "index": 3,
                                 "spider": false,
-                                "box_id": "732b27a19ec28bdb2ddd0b24b8e8226962d95f0fda8e2f46e094bfbff4fe1bbc",
+                                "box_id": 12321312312,
                                 "has_wire": true,
                                 "wire_id": 2523653138800
                             },
                             "end_c": {
-                                "id": "137110f9046d0c431d12e3c49f9d177c29338871d67a5afc7042792b05342467",
+                                "id": 123213562,
                                 "side": "spider",
                                 "index": 0,
                                 "spider": true,
@@ -333,7 +333,7 @@
                         {
                             "id": 2523653139088,
                             "start_c": {
-                                "id": "9a99609be088363ae5c075e4d3758601406a4a04081571247fcbe4ed69577375",
+                                "id": 12321323,
                                 "side": "left",
                                 "index": 0,
                                 "spider": false,
@@ -342,7 +342,7 @@
                                 "wire_id": 2523653139088
                             },
                             "end_c": {
-                                "id": "137110f9046d0c431d12e3c49f9d177c29338871d67a5afc7042792b05342467",
+                                "id": 123213562,
                                 "side": "spider",
                                 "index": 0,
                                 "spider": true,
@@ -354,7 +354,7 @@
                         {
                             "id": 2523653139376,
                             "start_c": {
-                                "id": "612b80f05d4aebfeb6701601f07172f74c9de84cd41427f565fb720e48713ab4",
+                                "id": 12321312315,
                                 "side": "right",
                                 "index": 0,
                                 "spider": false,
@@ -363,7 +363,7 @@
                                 "wire_id": 2523653139376
                             },
                             "end_c": {
-                                "id": "a95e50fb8ac39fb83b84994eec70da368a0207bb89ca60ca9f61b51ce37be116",
+                                "id": 123213592,
                                 "side": "spider",
                                 "index": 0,
                                 "spider": true,

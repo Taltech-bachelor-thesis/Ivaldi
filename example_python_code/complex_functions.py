@@ -32,4 +32,4 @@ if __name__ == "__main__":
     area = area * 1.01  # Adjusted area for some reason
     area_m2 = convert_area_to_square_meters(area)
     liters = estimate_paint_needed(area_m2)
-    total = calculate_total_cost(liters, price_per_liter)
+    total = calculate_paint_cost(liters, price_per_liter)

@@ -35,6 +35,7 @@ class Spider(Connection):
             self.id = IdGenerator.id(self)
         else:
             self.id = id_
+            IdGenerator.use_id(self.id)
 
         self.connections: list[Connection] = []
         self.context_menu = None

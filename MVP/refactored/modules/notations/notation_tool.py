@@ -19,7 +19,7 @@ def is_canvas_complete(canvas):
 
 def get_notations(canvas):
     pseudo = PseudoNotation()
-    diagram_notation = DiagramNotation(canvas.receiver.diagram)
+    diagram_notation = DiagramNotation(canvas.receiver.diagrams[canvas.id])
     hypergraph_notation = HypergraphNotation()
 
     # TODO add all different notations here

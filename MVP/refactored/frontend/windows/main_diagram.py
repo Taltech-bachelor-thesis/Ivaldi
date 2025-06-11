@@ -181,7 +181,7 @@ class MainDiagram(tk.Tk):
             self.saved_buttons[name] = button
 
         self.json_file_hash = self.calculate_boxes_json_file_hash()
-        self.label_content = {}
+        self.label_content = {} # TODO: I think label_content should contain BoxFunction objects, not strings
         self.load_functions()
         self.manage_methods = None
         self.import_counter = 0

@@ -63,6 +63,7 @@ class Box:
             self.id = IdGenerator.id(self)
         else:
             self.id = id_
+            IdGenerator.use_id(self.id)
         self.context_menu = None
         self.shape = self.create_shape()
 
@@ -674,6 +675,7 @@ class Box:
     def set_label(self, new_label):
         """
         Set label for Box.
+        Also it sets box_function by label if it exists.
 
         :param new_label: New label text.
         :return: None

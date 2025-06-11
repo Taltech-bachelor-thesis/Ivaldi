@@ -56,8 +56,6 @@ class ManageMethods(tk.Toplevel):
 
         self.delete_button = ttk.Button(self.button_frame, text="Delete", command=self.delete_method, bootstyle=ttk.DANGER)
 
-        self.main_diagram.load_functions()
-
         self.add_methods()
 
         self.buttons_hidden = True
@@ -190,4 +188,3 @@ class ManageMethods(tk.Toplevel):
             file.seek(0)
             file.truncate(0)
             file.write(json_object)
-

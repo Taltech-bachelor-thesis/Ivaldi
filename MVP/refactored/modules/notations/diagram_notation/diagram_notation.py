@@ -2,6 +2,8 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import numpy as np
 
+from MVP.refactored.backend.types.connection_info import ConnectionInfo
+
 
 class DiagramNotation:
 
@@ -22,31 +24,38 @@ class DiagramNotation:
 
         for wire in self.diagram.resources:
             wire_id = f"wire_{wire.id}"
-            wire_start = wire.connections[0]
-            wire_end = wire.connections[1]
+
+            if wire.left_connection:
+                wire_start: ConnectionInfo = wire.left_connection[0]
+            else:
+                wire_start: ConnectionInfo = wire.spider_connection[0]
+
+            if wire.right_connection:
+                wire_end: ConnectionInfo = wire.right_connection[0]
+            else:
+                spider_index = 1 if len(wire.spider_connection) > 1 else 0
+                wire_end: ConnectionInfo = wire.spider_connection[spider_index]
 
             self.graph.add_node(wire_id, type='wire')
-            port_start, start_box_id, side_start, wire_start_id = wire_start
-            port_end, end_box_id, side_end, wire_end_id = wire_end
 
-            if start_box_id is None:
+            if not wire_start.has_box():
                 start_box = f'input_{input_count}'
                 input_count += 1
             else:
-                start_box = f"box_{start_box_id}"
+                start_box = f"box_{wire_start.get_box_id()}"
 
-            if end_box_id is None:
+            if not wire_end.has_box():
                 end_box = f'output_{output_count}'
                 output_count += 1
             else:
-                end_box = f"box_{end_box_id}"
+                end_box = f"box_{wire_end.get_box_id()}"
 
-            if side_start == 'left':
-                self.graph.add_edge(wire_id, start_box, port=port_start, connection_type='input')
-                self.graph.add_edge(end_box, wire_id, port=port_end, connection_type='output')
+            if wire_start.side == 'left':
+                self.graph.add_edge(wire_id, start_box, port=wire_start.index, connection_type='input')
+                self.graph.add_edge(end_box, wire_id, port=wire_end.index, connection_type='output')
             else:
-                self.graph.add_edge(wire_id, end_box, port=port_end, connection_type='output')
-                self.graph.add_edge(start_box, wire_id, port=port_start, connection_type='input')
+                self.graph.add_edge(wire_id, end_box, port=wire_end.index, connection_type='output')
+                self.graph.add_edge(start_box, wire_id, port=wire_start.index, connection_type='input')
 
         for spider in self.diagram.spiders:
             spider_id = f"spider_{spider.id}"

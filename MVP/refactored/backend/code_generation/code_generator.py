@@ -1,4 +1,5 @@
 from queue import Queue
+from typing import Tuple
 
 import autopep8
 
@@ -14,6 +15,7 @@ from MVP.refactored.backend.resource import Resource
 from MVP.refactored.backend.types.connection_info import ConnectionInfo
 from MVP.refactored.frontend.components.custom_canvas import CustomCanvas
 
+spider_index = 0
 
 class CodeGenerator:
     @classmethod
@@ -33,6 +35,8 @@ class CodeGenerator:
         Returns:
             str: The generated and auto formatted Python code as a single string.
         """
+        global spider_index
+        spider_index = 0
         hypergraphs_on_this_canvas: list[Hypergraph] = HypergraphManager.get_graphs_by_canvas_id(canvas.id)
 
         box_functions: set[BoxFunction] = set()
@@ -139,19 +143,33 @@ class CodeGenerator:
         This method generates the function signature for a main function, including
         input parameters based on the source nodes of the provided diagram.
         """
+        global spider_index
         definition: str = f"def {func_name}("
 
         node_and_hyper_edge_to_variable_name: dict[int, str] = dict()
         index: int = -1
-
+        spiders: set[int] = set()
         for node in diagram_inputs_as_nodes:
             actual_hash: int = cls.get_input_actual_node_group_hash(node, receiver)
             index += 1
             var_name = f"input_{index}"
             definition += f"{var_name}, "
-            node_and_hyper_edge_to_variable_name[actual_hash] = var_name
+
+            if actual_hash in node_and_hyper_edge_to_variable_name: # in case of spider
+                node_and_hyper_edge_to_variable_name[actual_hash] += f", {var_name}"
+                spiders.add(actual_hash)
+            else:
+                node_and_hyper_edge_to_variable_name[actual_hash] = var_name
+
 
         definition = (definition[:-2] if index >= 0 else definition) + "):"
+
+        for spider in spiders:
+            spider_variable = f"spider_{spider_index}"
+            spider_definition = f"{spider_variable} = {node_and_hyper_edge_to_variable_name[spider]}"
+            node_and_hyper_edge_to_variable_name[spider] = spider_variable
+            spider_index += 1
+            definition += f"\n\t{spider_definition}"
 
         return definition, node_and_hyper_edge_to_variable_name
 
@@ -169,28 +187,60 @@ class CodeGenerator:
         for executing each hyper edge in the correct order. It maps source nodes
         to input variables and target nodes to output variables or tuple elements.
         """
+        global spider_index
         main_function_content = ""
         index = 0
         while not queue.empty():
             hyper_edge = queue.get()
+
             variable = f"res_{index}"
             variable_definition = f"{variable} = {renamed_functions[hyper_edge.get_box_function()]}("
-
             for source_node in hyper_edge.get_source_nodes():
                 actual_hash: int = cls.get_output_actual_node_group_hash(source_node, receiver)
-                variable_definition += f"{node_and_hyper_edge_to_variable_name[actual_hash]}, "
-            variable_definition = variable_definition[:-2] + ")"
+                actual_hash2 = cls.get_input_actual_node_group_hash(source_node, receiver)
+                if actual_hash in node_and_hyper_edge_to_variable_name:
+                    variable_definition += f"{node_and_hyper_edge_to_variable_name[actual_hash]}, "
+                elif actual_hash2 in node_and_hyper_edge_to_variable_name:
+                    variable_definition += f"{node_and_hyper_edge_to_variable_name[actual_hash2]}, "
+                else:
+                    raise RuntimeError("Can`t find variable name")
+                    # pass
+
+                # variable_definition += f"{node_and_hyper_edge_to_variable_name[actual_hash2]}, "
+            if len(hyper_edge.get_source_nodes()) > 0:
+                variable_definition = variable_definition[:-2]
+            variable_definition += ")"
             main_function_content += f"\n\t{variable_definition}"
 
             if len(hyper_edge.get_target_nodes()) > 1:
+                spiders: set[int] = set()
                 for i, target_node in enumerate(hyper_edge.get_target_nodes()):
                     actual_hash: int = cls.get_input_actual_node_group_hash(target_node, receiver)
-                    if actual_hash not in node_and_hyper_edge_to_variable_name:
+                    if actual_hash in node_and_hyper_edge_to_variable_name: # in case of spider
+                        node_and_hyper_edge_to_variable_name[actual_hash] += f", {variable}[{i}]"
+                        spiders.add(actual_hash)
+                    else:
                         node_and_hyper_edge_to_variable_name[actual_hash] = f"{variable}[{i}]"
+                for spider in spiders:
+                    spider_variable = f"spider_{spider_index}"
+                    spider_definition = f"{spider_variable} = {node_and_hyper_edge_to_variable_name[spider]}"
+                    main_function_content += f"\n\t{spider_definition}"
+                    node_and_hyper_edge_to_variable_name[spider] = spider_variable
+                    spider_index += 1
             else:
                 target_node = hyper_edge.get_target_nodes()[0]
                 actual_hash: int = cls.get_input_actual_node_group_hash(target_node, receiver)
-                node_and_hyper_edge_to_variable_name[actual_hash] = variable
+                if actual_hash in node_and_hyper_edge_to_variable_name: # in case of spider
+                    node_and_hyper_edge_to_variable_name[actual_hash] += f", {variable}"
+
+                    spider_variable = f"spider_{spider_index}"
+                    spider_definition = f"{spider_variable} = {node_and_hyper_edge_to_variable_name[actual_hash]}"
+                    main_function_content += f"\n\t{spider_definition}"
+                    node_and_hyper_edge_to_variable_name[actual_hash] = spider_variable
+                    spider_index += 1
+                else:
+                    node_and_hyper_edge_to_variable_name[actual_hash] = variable
+                # node_and_hyper_edge_to_variable_name[actual_hash] = variable
 
             index += 1
         return main_function_content, node_and_hyper_edge_to_variable_name
@@ -211,8 +261,7 @@ class CodeGenerator:
         main_function_return = "\n\treturn "
         added: set[int] = set()
         for output in cls.get_sorted_diagram_outputs(hypergraph, receiver, hypergraph.canvas_id):
-            if (cls.get_output_actual_node_group_hash(output, receiver) in node_and_hyper_edge_to_variable_name
-                    and cls.get_output_actual_node_group_hash(output, receiver) not in added):
+            if cls.get_output_actual_node_group_hash(output, receiver) in node_and_hyper_edge_to_variable_name:
                 main_function_return += f"{node_and_hyper_edge_to_variable_name[cls.get_output_actual_node_group_hash(output, receiver)]}, "
                 added.add(cls.get_output_actual_node_group_hash(output, receiver))
         main_function_return = main_function_return[:-2 if len(added) > 0 else -1]
